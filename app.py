@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__)
 
-model = pickle.load(open('logisticregression.pkl', 'rb'))
+model = pickle.load(open('RandomForestClassifier.pkl', 'rb'))
 
 @app.route('/')
 def home():
