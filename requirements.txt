@@ -1,4 +1,4 @@
-numpy==1.20.1
+numpy>=1.9.2
 flask==1.1.2
 requests==2.25.1
 itsdangerous==1.1.0
