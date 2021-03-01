@@ -1,10 +1,11 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
+from keras.models import load_model
 
 app = Flask(__name__)
 
-model = pickle.load(open('RandomForestClassifier.pkl', 'rb'))
+model = load.model('model.h5')
 
 @app.route('/')
 def home():
