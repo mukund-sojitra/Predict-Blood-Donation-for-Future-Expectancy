@@ -1,11 +1,16 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
-model = load_model('model.h5')
+# Machine Learning Model
+model = pickle.load(open('RandomForestClassifier.pkl', 'rb'))
+# model = pickle.load(open('logisticregression.pkl', 'rb'))
+
+# Deep Learning Model
+# model = load_model('model.h5')
 
 @app.route('/')
 def home():
@@ -19,9 +24,9 @@ def predict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
 
-    # prediction = model.predict_classes(final_features)
-
     prediction = model.predict_classes(final_features)
+
+    # prediction = model.predict_classes(final_features)
 
     if int(prediction[0]) == 0:
         output = "No"
