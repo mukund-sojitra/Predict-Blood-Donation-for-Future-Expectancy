@@ -24,7 +24,7 @@ def predict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
 
-    prediction = model.predict_classes(final_features)
+    prediction = model.predict(final_features)
 
     # prediction = model.predict_classes(final_features)
 
