@@ -21,7 +21,7 @@ def predict():
 
     # prediction = model.predict_classes(final_features)
 
-    prediction = model_load.predict_classes(final_features)
+    prediction = model.predict_classes(final_features)
 
     if int(prediction[0]) == 0:
         output = "No"
