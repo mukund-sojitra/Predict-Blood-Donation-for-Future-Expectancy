@@ -5,7 +5,7 @@ from keras.models import load_model
 
 app = Flask(__name__)
 
-model = load.model('model.h5')
+model = load_model('model.h5')
 
 @app.route('/')
 def home():
