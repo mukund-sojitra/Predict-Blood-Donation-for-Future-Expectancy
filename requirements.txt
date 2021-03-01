@@ -7,6 +7,5 @@ markupsafe==1.1.1
 Werkzeug==0.15.5
 gunicorn==19.9.0
 itsdangerous==1.1.0
-pandas>=0.19
 keras==2.4.3
 tensorflow>=2.0.0
