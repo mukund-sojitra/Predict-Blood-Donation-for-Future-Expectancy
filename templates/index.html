@@ -18,12 +18,13 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type = "text" name = "recency"  placeholder ="Recency (months)"      required="required" />
-      <input type = "text" name = "freq"     placeholder ="Frequency (times)"     required="required" />
-      <input type = "text" name = "monetary" placeholder ="Monetary (c.c. blood)" required="required" />
-      <input type = "text" name = "time"     placeholder ="Time (months)"         required="required" />
 
-      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    	<input type = "text" name = "recency"  placeholder = "Recency (months)"      required = "required" />
+      <input type = "text" name = "freq"     placeholder = "Frequency (times)"     required = "required" />
+      <input type = "text" name = "monetary" placeholder = "Monetary (c.c. blood)" required = "required" />
+      <input type = "text" name = "time"     placeholder = "Time (months)"         required = "required" />
+
+      <button type = "submit" class = "btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
    <br>
